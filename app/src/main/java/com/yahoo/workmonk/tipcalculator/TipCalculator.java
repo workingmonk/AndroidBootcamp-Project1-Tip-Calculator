@@ -14,6 +14,8 @@ import java.text.DecimalFormat;
 
 public class TipCalculator extends Activity {
     public static final String DECIMAL_FORMAT = "#.##";
+    public static final String PLUS = " + ";
+    public static final String EQUALS = " = ";
     private EditText etBillAmount;
     private TextView tvTipValue;
     
@@ -37,6 +39,14 @@ public class TipCalculator extends Activity {
         setTipAmount(20);
     }
 
+    public void onCalculateTip25(View v){
+        setTipAmount(25);
+    }
+
+    public void onCalculateTip5(View v){
+        setTipAmount(5);
+    }
+
     private void setTipAmount(double tipPercent){
         double totalBill;
         try {
@@ -45,11 +55,10 @@ public class TipCalculator extends Activity {
             Toast.makeText(getApplicationContext(), getResources().getText(R.string.numberOnlyError), Toast.LENGTH_SHORT).show();
             return;
         }
-        double tipAmount = tipPercent * totalBill;
+        double tipAmount = (tipPercent * totalBill)/100;
 
         DecimalFormat df = new DecimalFormat(DECIMAL_FORMAT);
-        tvTipValue.setText(df.format(tipAmount/100));
-        //TODO:Also set the final bill amount
+        tvTipValue.setText(df.format(totalBill) + PLUS +df.format(tipAmount) + EQUALS + df.format(totalBill + tipAmount));
     }
 
     @Override

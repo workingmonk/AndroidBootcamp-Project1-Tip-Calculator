@@ -7,7 +7,7 @@
     <string name="percent10">10%</string>
     <string name="percent15">15%</string>
     <string name="percent20">20%</string>
-    <string name="tipValue">Tip Amount</string>
+    <string name="tipValue">Bill + Tip Amount = Total</string>
     <string name="billAmount">Enter Bill Amount</string>
     <string name="numberOnlyError">"Numbers only in Bill Amount"</string>
 
