@@ -14,3 +14,6 @@ Special features :
 - Shows total amount after adding tip
 - Emoji to express your mood for the food/service to calculate tip
 - custom app icon
+
+
+![alt tag](https://github.com/workingmonk/AndroidBootcamp-Project1-Tip-Calculator/blob/master/TipCalculator.gif)
